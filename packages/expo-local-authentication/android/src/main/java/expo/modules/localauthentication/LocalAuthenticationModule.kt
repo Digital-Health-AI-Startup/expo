@@ -27,6 +27,7 @@ class LocalAuthenticationModule(context: Context) : ExportedModule(context), Act
   private val AUTHENTICATION_TYPE_FINGERPRINT = 1
   private val AUTHENTICATION_TYPE_FACIAL_RECOGNITION = 2
   private val AUTHENTICATION_TYPE_IRIS = 3
+  private val AUTHENTICATION_TYPE_SECRET = 4
   private val SECURITY_LEVEL_NONE = 0
   private val SECURITY_LEVEL_SECRET = 1
   private val SECURITY_LEVEL_BIOMETRIC = 2
@@ -130,6 +131,10 @@ class LocalAuthenticationModule(context: Context) : ExportedModule(context), Act
     if (result == BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE) {
       promise.resolve(results)
       return
+    }
+
+    if (isDeviceSecure) {
+      results.add(AUTHENTICATION_TYPE_SECRET)
     }
 
     // note(cedric): replace hardcoded system feature strings with constants from

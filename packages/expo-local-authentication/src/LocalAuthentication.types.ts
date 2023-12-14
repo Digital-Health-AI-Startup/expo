@@ -17,6 +17,10 @@ export enum AuthenticationType {
    * @platform android
    */
   IRIS = 3,
+  /**
+   * Indicates secret/pin support.
+   */
+  SECRET = 4,
 }
 
 // @needsAudit

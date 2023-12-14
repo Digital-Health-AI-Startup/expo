@@ -14,6 +14,10 @@ export var AuthenticationType;
      * @platform android
      */
     AuthenticationType[AuthenticationType["IRIS"] = 3] = "IRIS";
+    /**
+     * Indicates secret/pin support.
+     */
+    AuthenticationType[AuthenticationType["SECRET"] = 4] = "SECRET";
 })(AuthenticationType || (AuthenticationType = {}));
 // @needsAudit
 export var SecurityLevel;

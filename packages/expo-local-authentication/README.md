@@ -7,7 +7,7 @@
   </a>
 </p>
 
-Provides an API for FaceID and TouchID (iOS) or the Fingerprint API (Android) to authenticate the user with a face or fingerprint scan.
+Provides an API for FaceID and TouchID (iOS) or the Fingerprint API (Android) to authenticate the user with a face or fingerprint scan or the user's phone secret (ex. pin, password, swipe pattern).
 
 # API documentation
 

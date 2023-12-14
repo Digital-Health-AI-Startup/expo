@@ -26,6 +26,11 @@ public class LocalAuthenticationModule: Module {
     AsyncFunction("supportedAuthenticationTypesAsync") { () -> [Int] in
       var supportedAuthenticationTypes: [Int] = []
 
+      let isAuthenticationSupported: Bool = context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: &error)
+      if isAuthenticationSupported && error == nil {
+        supportedAuthenticationTypes.append(AuthenticationType.secret.rawValue)
+      }
+
       if isTouchIdDevice() {
         supportedAuthenticationTypes.append(AuthenticationType.fingerprint.rawValue)
       }
@@ -160,6 +165,7 @@ func convertErrorCode(error: NSError) -> String {
 enum AuthenticationType: Int {
   case fingerprint = 1
   case facialRecognition = 2
+  case secret = 4
  }
 
 enum SecurityLevel: Int {

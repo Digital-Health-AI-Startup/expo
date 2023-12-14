@@ -18,7 +18,11 @@ export declare enum AuthenticationType {
      * Indicates iris recognition support.
      * @platform android
      */
-    IRIS = 3
+    IRIS = 3,
+    /**
+     * Indicates secret/pin support.
+     */
+    SECRET = 4
 }
 export declare enum SecurityLevel {
     /**
