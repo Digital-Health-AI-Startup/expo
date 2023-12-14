@@ -1,10 +1,11 @@
 {
-  "name": "expo-local-authentication",
+  "name": "expo-local-authentication-with-pin",
   "version": "13.4.1",
-  "description": "Provides an API for FaceID and TouchID (iOS) or the Fingerprint API (Android) to authenticate the user with a face or fingerprint scan.",
+  "description": "Provides an API for FaceID and TouchID (iOS) or the Fingerprint API (Android) to authenticate the user with a face or fingerprint scan or the user's phone secret (ex. pin, password, swipe pattern).",
   "main": "build/LocalAuthentication.js",
   "types": "build/LocalAuthentication.d.ts",
   "sideEffects": false,
+  "private": false,
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
@@ -25,13 +26,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/expo/expo.git",
+    "url": "https://github.com/Digital-Health-AI-Startup/expo.git",
     "directory": "packages/expo-local-authentication"
   },
   "bugs": {
     "url": "https://github.com/expo/expo/issues"
   },
-  "author": "650 Industries, Inc.",
+  "author": "Percipio Health",
   "license": "MIT",
   "homepage": "https://docs.expo.dev/versions/latest/sdk/local-authentication/",
   "jest": {
