@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const config_plugins_1 = require("expo/config-plugins");
-const pkg = require('expo-local-authentication-with-pin/package.json');
+const pkg = require('expo-local-authentication-pin/package.json');
 const FACE_ID_USAGE = 'Allow $(PRODUCT_NAME) to use Face ID';
 const withLocalAuthentication = (config, { faceIDPermission } = {}) => {
     if (!config.ios)

@@ -24,6 +24,8 @@ public class LocalAuthenticationModule: Module {
     }
 
     AsyncFunction("supportedAuthenticationTypesAsync") { () -> [Int] in
+      let context = LAContext()
+      var error: NSError?
       var supportedAuthenticationTypes: [Int] = []
 
       let isAuthenticationSupported: Bool = context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: &error)
