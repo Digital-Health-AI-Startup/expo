@@ -1,5 +1,5 @@
 {
-  "name": "expo-local-authentication-with-pin",
+  "name": "expo-local-authentication-pin",
   "version": "13.4.1",
   "description": "Provides an API for FaceID and TouchID (iOS) or the Fingerprint API (Android) to authenticate the user with a face or fingerprint scan or the user's phone secret (ex. pin, password, swipe pattern).",
   "main": "build/LocalAuthentication.js",
